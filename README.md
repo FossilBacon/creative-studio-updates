@@ -1,8 +1,8 @@
 # Creative Studio
 
-Version 1.2 | A powerful, self-updating project management system for organizing content with custom fields, media attachments, and internal linking.
+Version 1.0 | A powerful project management system for organizing content with custom fields, media attachments, and internal linking.
 
-License: MIT | Python 3.8+ | PySide6
+License: MIT | Windows 10/11
 
 ## Features
 
@@ -26,37 +26,32 @@ User Interface:
 - Responsive Layout
 - Fast Navigation
 
-Auto-Update System:
-- Self-Updating - Checks for new versions automatically
-- Status Bar Notifications - Click to update when available
-- One-Click Installation - Downloads and restarts automatically
-- Preserves Data - All projects and settings remain intact
+## System Requirements
 
-## Requirements
-
-- Python 3.8 or higher
-- PySide6
+- Windows 10 or Windows 11
+- 64-bit processor
+- 4GB RAM minimum (8GB recommended)
+- 100MB free disk space
 - Internet connection (for auto-update feature)
 
 ## Installation
 
-Quick Start (Recommended for Users):
+Download and Install:
 
-1. Download creative_studio.py from the latest release
-2. Run: python creative_studio.py
-3. First launch will prompt you to create or open a project
+1. Download CreativeStudio_Setup.exe from the latest release
+2. Run the installer
+3. Follow the on-screen instructions
+4. Launch Creative Studio from the Start Menu or Desktop shortcut
 
-Manual Installation (For Developers):
+Portable Version:
 
-1. Clone the repository:
-   git clone https://github.com/yourusername/creative-studio-updates.git
-   cd creative-studio-updates
+1. Download CreativeStudio_Portable.zip
+2. Extract to any folder
+3. Run CreativeStudio.exe
 
-2. Install dependencies:
-   pip install PySide6
-
-3. Run the application:
-   python creative_studio.py
+First Launch:
+- The first launch will prompt you to create or open a project
+- Default project location: Documents\CreativeStudio\Projects
 
 ## First Time Setup
 
@@ -126,9 +121,13 @@ Startup:
 - Open Last Project: Automatically load your most recent project
 - Auto-Save Interval: Set how often to save (10-300 seconds)
 
-## Project Structure
+## File Locations
 
-Each project creates a folder with this structure:
+Installation: C:\Program Files\Creative Studio\
+User Data: %USERPROFILE%\Documents\CreativeStudio\
+Settings: %APPDATA%\CreativeStudio\settings.ini
+
+Project Structure:
 
 MyProject/
 ├── studio_project.json    # Main project data
@@ -151,7 +150,7 @@ Creative Studio checks for updates automatically:
 
 To manually check for updates: Help -> Check for Updates
 
-Note: The app needs write permission to its own directory to update itself.
+Note: Administrator privileges may be required for auto-update if installed in Program Files.
 
 ## Keyboard Shortcuts
 
@@ -159,12 +158,32 @@ Save All: Ctrl+S
 New Page: Ctrl+N
 Search: Ctrl+F
 
+## Uninstallation
+
+Control Panel:
+1. Open Windows Control Panel
+2. Go to Programs and Features
+3. Select Creative Studio
+4. Click Uninstall
+
+Using Uninstaller:
+1. Start Menu -> Creative Studio -> Uninstall Creative Studio
+2. Or run Uninstall.exe in the installation folder
+
+Note: Uninstallation will not delete your projects. You can manually delete them from Documents\CreativeStudio\Projects if desired.
+
 ## Troubleshooting
+
+Application Won't Start:
+- Verify Windows is up to date
+- Reinstall the application
+- Check Windows Event Viewer for errors
 
 Update Fails to Download:
 - Check your internet connection
-- Verify the GitHub repository is accessible
-- Try Help -> Check for Updates manually
+- Run as Administrator
+- Temporarily disable antivirus software
+- Download the latest installer manually from GitHub
 
 Media Files Not Displaying:
 - Ensure files are in the correct project folder
@@ -180,18 +199,80 @@ Can't Create Categories:
 - Category IDs cannot contain spaces
 - Each category needs a unique internal ID
 
-File Structure:
+Projects Not Saving:
+- Ensure you have write permissions to Documents folder
+- Check disk space
+- Run as Administrator
 
-creative_studio.py          # Main application
-version.txt                 # Version number (for auto-update)
-README.md                   # This file
+## Known Issues
+
+Version 1.0:
+- None reported
 
 ## License
 
-MIT License
+MIT License - See LICENSE.txt in installation folder
 
 ## Credits
 
-Created by FossilBacon
+Created by [Your Name]
 
-Built with: Python, PySide6 (Qt for Python)
+Built with:
+- Python 3.8+
+- PySide6 (Qt for Python)
+- PyInstaller (for EXE packaging)
+
+## Version History
+
+Version 1.0 (Current - Initial Release):
+- Multi-Project Management
+- Custom Categories with dynamic fields
+- Rich Text Editor with internal linking
+- Media attachments (images, audio, 3D models)
+- Dark & Light themes
+- Adjustable font size
+- Auto-save functionality
+- Search pages
+- Recent projects list
+- Settings dialog
+
+## Roadmap
+
+Planned features for future versions:
+
+Version 1.1:
+- Export/Import projects
+- PDF export of pages
+- Backup and restore
+
+Version 1.2:
+- Tag system for pages
+- Full-text search across all content
+- Plugin system
+
+Version 1.3:
+- Cloud sync support
+- Team collaboration
+- Version history for pages
+
+## Support
+
+- Report issues on GitHub Issues
+- Feature requests welcome
+- Include version number and Windows version in bug reports
+
+## System Administrator Notes
+
+Silent Installation (for IT deployment):
+CreativeStudio_Setup.exe /verysilent /suppressmsgboxes /norun
+
+Registry Keys:
+HKEY_CURRENT_USER\Software\Creative Studio
+
+Command Line Arguments:
+--reset-settings    Reset all settings to defaults
+--project "path"    Open specific project on launch
+
+## Disclaimer
+
+This software is provided "as is" without warranty of any kind. Always backup your projects before updating. The authors are not responsible for data loss.
