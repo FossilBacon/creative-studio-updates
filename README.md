@@ -180,15 +180,6 @@ Can't Create Categories:
 - Category IDs cannot contain spaces
 - Each category needs a unique internal ID
 
-## Development
-
-Creating a Release:
-
-1. Update VERSION constant in creative_studio.py
-2. Update version.txt in the repository with the new version number
-3. Commit both files
-4. Users will receive the update automatically
-
 File Structure:
 
 creative_studio.py          # Main application
@@ -201,43 +192,6 @@ MIT License
 
 ## Credits
 
-Created by [Your Name]
+Created by FossilBacon
 
 Built with: Python, PySide6 (Qt for Python)
-
-## Version History
-
-Version 1.2 (Current):
-- Added auto-update system
-- Added project management (create/open/switch)
-- Added settings dialog (themes, font size, auto-save)
-- Added recent projects list
-- Improved UI with dark/light themes
-- Added status bar notifications
-- Renamed "sections" to "categories" for clarity
-- Added credits/about dialog
-
-Version 1.1:
-- Added media attachments
-- Added custom fields system
-- Added internal page linking
-
-Version 1.0:
-- Initial release
-- Basic page management
-- Category system
-
-## Roadmap
-
-Planned features:
-- Export/Import projects
-- Backup and restore functionality
-- Tag system for pages
-- Full-text search across all content
-- PDF export of pages
-- Cloud sync support
-- Plugin system for extensions
-
-## Disclaimer
-
-This software is provided "as is" without warranty of any kind. Always backup your projects before major updates.
