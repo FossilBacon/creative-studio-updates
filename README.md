@@ -1,8 +1,8 @@
 # Creative Studio
 
-Version 1.0 | A powerful project management system for organizing content with custom fields, media attachments, and internal linking.
+A powerful project management system for organizing content with custom fields, media attachments, and internal linking.
 
-License: MIT | Windows 10/11
+Small app i made to get used to TKinter for my school assessment
 
 ## Features
 
